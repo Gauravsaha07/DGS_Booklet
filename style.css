@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    height:100vh;
+    background-image: url('https://localdstvinstaller.co.za/wp-content/uploads/2018/08/netflix.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 70px;
+}
+
+.logo-box{
+    background:white;
+    padding:6px 14px;
+    border-radius:8px;
+}
+
+.logo{
+    color:#e50914;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.top-buttons button{
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+#loginBtn{background:white; border: 1px solid #ccc;}
+#signupBtn{background:#e60023; color:white; margin-left:10px;}
+
+.center-container{
+    background:black;
+    color:white;
+    text-align:center;
+    padding: 35px;
+    width:500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:10px;
+    display: block; /* Default is block */
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none; /* Controls form visibility */
+    justify-content:center;
+    align-items:center;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.form-box{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-box input{
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline: none;
+}
+
+.form-box input:focus {
+    border: 2px solid #e60023;
+}
+
+/* STYLED FORMS SUBMIT BUTTONS */
+.form-submit {
+    background:#e60023;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-submit:hover {
+    background: #b5001c;
+}
+
+.forgot{
+    font-size:14px;
+    text-decoration:none;
+    color:blue;
+    text-align: right;
+}
+
+.forgot:hover{text-decoration:underline;}
+
+.error{color:red; font-size:12px;}
+
+/* HOME SECTION */
+.home{
+    display:none;
+}
+
+.home-header{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    padding:20px 40px;
+    gap:10px;
+    border-bottom: 1px solid #eee;
+}
+
+.search{
+    padding:10px 20px;
+    width:350px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    transition:0.3s;
+    outline: none;
+}
+
+.search:focus, .search:hover{
+    border:2px solid black;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    align-items:center;
+}
+
+.nav-item{
+    position:relative;
+    padding:5px 10px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+/* Active State Underline */
+.nav-item::after {
+    content:"";
+    position:absolute;
+    height:3px;
+    width: 0;
+    background:black;
+    bottom:-5px;
+    left:0;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-item.active::after {
+    width: 100%;
+}
+
+.sep{
+    margin:0 15px;
+    color:black;
+    font-weight: bold;
+}
+
+#logoutBtn{
+    background:#e60023;
+    color:white;
+    border-radius:6px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+}
+
+/* BOOK GRID */
+/* .books-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    padding:50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-card{
+    background:white;
+    border: 1px solid #eee;
+    border-radius:10px;
+    padding:40px 20px;
+    transition:0.3s;
+    text-align:center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+} */
+
+.books-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:40px;
+justify-items:center;
+align-items:center;
+height:calc(100vh - 100px);
+}
+
+.book-card{
+background:white;
+border-radius:10px;
+padding:20px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+text-align:center;
+}
+
+
+.book-card:hover{
+    transform:scale(1.05);
+}
+
+.not-found {
+    grid-column: 1 / span 3;
+    text-align: center;
+    font-size: 24px;
+    color: #777;
+    margin-top: 50px;
+}

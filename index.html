@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGS BOOKLET</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<section class="hero" id="heroSection">
+    <header class="top-header">
+        <div class="logo-box">
+            <h1 class="logo">DGS BOOKLET</h1>
+        </div>
+        <div class="top-buttons">
+            <button id="loginBtn">Log In</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="center-container" id="centerContainer">
+        <h1>Ultimate Books, stories and more</h1>
+        <h3>Starts at ₹10. Cancel at any time.</h3>
+        <p>Ready to read? Enter your mobile number to create or restart your membership.</p>
+    </div>
+</section>
+
+<div class="modal" id="loginModal">
+    <div class="form-box">
+        <h2>Log In</h2>
+        <input id="loginMobile" placeholder="Enter Mobile Number">
+        <input id="loginPassword" type="password" placeholder="Enter Password">
+        <a href="#" class="forgot">Forgot Password?</a>
+        <p class="error" id="loginError"></p>
+        <button type="button" class="form-submit" id="loginSubmit">Log In</button>
+    </div>
+</div>
+
+<div class="modal" id="signupModal">
+    <div class="form-box">
+        <h2>Sign Up</h2>
+        <input id="signupMobile" placeholder="Enter Mobile Number">
+        <input id="signupPassword" type="password" placeholder="Create Password">
+        <input id="confirmPassword" type="password" placeholder="Confirm Password">
+        <p class="error" id="signupError"></p>
+        <button type="button" class="form-submit" id="signupSubmit">Sign Up</button>
+    </div>
+</div>
+
+<section class="home" id="homePage">
+    <header class="home-header">
+        <h1 class="logo">DGS BOOKLET</h1>
+        <input class="search" id="searchInput" placeholder="Search To Read Books, Listen Stories And Watch Shows">
+
+        <nav>
+            <ul id="navLinks">
+                <li class="nav-item active" data-type="home">Home</li><span class="sep">| |</span>
+                <li class="nav-item" data-type="books">Read Books</li><span class="sep">| |</span>
+                <li class="nav-item" data-type="stories">Listen Stories</li><span class="sep">| |</span>
+                <li class="nav-item" data-type="shows">Watch Shows</li>
+            </ul>
+        </nav>
+
+        <button id="logoutBtn">Log Out</button>
+    </header>
+
+    <div class="books-container" id="booksContainer"></div>
+</section>
+
+<script src="./main.js"></script>
+</body>
+</html>
